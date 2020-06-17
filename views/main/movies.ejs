@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Now Playing Consuming API</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesMovie.css">
+<body>
+    <div id="app-movies">
+        <%- include('../partials/head') %> 
+        <div class="movies-outer-container">
+            <% movieDataToBeProcessed.forEach((movie) => { %>
+                <div class="movie-inner-container">
+                    <div class="movie-inner-center-poster-plus-description-container">
+                        <div class="movie-inner-center-poster-only-container">
+                            <img class="movie-poster-img" src="<%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %>" alt="Movie Poster"/>
+                        </div>
+                        <div class="movie-inner-center-description-only-container">
+                            <p class="movie-title-display"> <%= movie.title %></p>
+                            <p class="movie-full-description-display"><%= movie.overview %></p>
+                        </div>
+                    </div>    
+                </div>
+            <% }); %> 
+            
+        </div>
+        <%- include('../partials/footer') %> 
+    </div>
+</body>
+</html>

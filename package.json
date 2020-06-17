@@ -1,0 +1,36 @@
+{
+  "name": "random-movie-mashup-homework",
+  "version": "1.0.0",
+  "description": "This is a web app that uses Randomuser and Movies API along with ejs, express, mongodb, mongoose, and most importantly passportjs to register/login users into a website while saving their sessions and cookies and login data and displaying two options for Random User API results and Now Playing Movies from Movies API, data is generated dynamically",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdmontDantes/random-movie-mashup-homework.git"
+  },
+  "author": "Bogdan Kowaltchook Pliable.Link",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdmontDantes/random-movie-mashup-homework/issues"
+  },
+  "homepage": "https://github.com/EdmontDantes/random-movie-mashup-homework#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.19",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}

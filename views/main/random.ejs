@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Photo and Name Consume API</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesRandom.css">
+<body>
+    <div id="app-random">
+        <%- include('../partials/header') %> 
+        <div class="individuals-outer-container">
+            <% sortedRandomDataToBeProcessed.forEach((individual) => { %>
+                <div class="individual-inner-container">
+                    <div class="individual-inner-center-picture-plus-name-container">
+                        <div class="individual-inner-center-picture-only-container">
+                            <img class="individual-picture-img" src="<%= individual.picture.large %>" alt="Profile Picture"/>
+                        </div>
+                        <div class="individual-inner-center-name-only-container">
+                            <p class="individual-full-name-display"><%= individual.name.first + ' ' + individual.name.last %></p>
+                        </div>
+                    </div>    
+                </div>
+            <% }); %> 
+            
+        </div>
+        <%- include('../partials/footer') %> 
+    </div>
+</body>
+</html>
+
+    <!-- example of data to see how to visualize the references
+    // [nodemon] clean exit - waiting for changes before restart
+    // [nodemon] restarting due to changes...
+    // [nodemon] starting `node thirdPartyControllers.js`
+    // {
+    //   gender: 'female',
+    //   name: { title: 'Madame', first: 'Muriel', last: 'Andre' },
+    //   location: {
+    //     street: { number: 6294, name: 'Rue de Cuire' },
+    //     city: 'Aristau',
+    //     state: 'Genève',
+    //     country: 'Switzerland',
+    //     postcode: 1655,
+    //     coordinates: { latitude: '-57.5184', longitude: '170.0856' },
+    //     timezone: { offset: '-7:00', description: 'Mountain Time (US & Canada)' }
+    //   },
+    //   email: 'muriel.andre@example.com',
+    //   login: {
+    //     uuid: 'b002a704-1c0a-49aa-9fb5-5ffa3d123591',
+    //     username: 'goldengoose966',
+    //     password: 'pretty',
+    //     salt: 'WdPJNNL8',
+    //     md5: 'c7fa45871d8556a1523dbe8d0cc07ee6',
+    //     sha1: 'ffee06d5220f9f7fa506701a060d438c6c5ee383',
+    //     sha256: '379bbed4bfb5a58554275eef4a017c89bd14e1cd3b3115315c7aed277b10518c'
+    //   },
+    //   dob: { date: '1997-06-06T23:35:24.917Z', age: 23 },
+    //   registered: { date: '2014-03-30T12:19:20.218Z', age: 6 },
+    //   phone: '075 236 06 89',
+    //   cell: '077 051 55 45',
+    //   id: { name: 'AVS', value: '756.8027.5726.37' },
+    //   picture: {
+    //     large: 'https://randomuser.me/api/portraits/women/21.jpg',
+    //     medium: 'https://randomuser.me/api/portraits/med/women/21.jpg',
+    //     thumbnail: 'https://randomuser.me/api/portraits/thumb/women/21.jpg'
+    //   },
+    //   nat: 'CH'
+    // }
+    // [nodemon] clean exit - waiting for changes before restart
+    // [nodemon] restarting due to changes...
+    // [nodemon] starting `node thirdPartyControllers.js`
+    // {
+    //   gender: 'male',
+    //   name: { title: 'Mr', first: 'Ümit', last: 'Alpuğan' },
+    //   location: {
+    //     street: { number: 2685, name: 'Bağdat Cd' },
+    //     city: 'Burdur',
+    //     state: 'Bingöl',
+    //     country: 'Turkey',
+    //     postcode: 74906,
+    //     coordinates: { latitude: '-47.8242', longitude: '-143.3951' },
+    //     timezone: { offset: '-8:00', description: 'Pacific Time (US & Canada)' }
+    //   },
+    //   email: 'umit.alpugan@example.com',
+    //   login: {
+    //     uuid: '20aee3f4-31e5-4e12-8d22-b6c8d14a8923',
+    //     username: 'blackelephant846',
+    //     password: 'monday',
+    //     salt: 'xVG2dsNF',
+    //     md5: '6323fdda17e2e15f76a19321713aa1ed',
+    //     sha1: 'c449b447b28d41178fd1ff8f4efb09658892b0e7',
+    //     sha256: '672b077e7bb1b031169620adb43faea665a037e20af8cc7b9679685c0b83462a'
+    //   },
+    //   dob: { date: '1950-07-11T15:27:04.484Z', age: 70 },
+    //   registered: { date: '2012-09-06T01:31:15.533Z', age: 8 },
+    //   phone: '(402)-807-3372',
+    //   cell: '(519)-947-5509',
+    //   id: { name: '', value: null },
+    //   picture: {
+    //     large: 'https://randomuser.me/api/portraits/men/13.jpg',
+    //     medium: 'https://randomuser.me/api/portraits/med/men/13.jpg',
+    //     thumbnail: 'https://randomuser.me/api/portraits/thumb/men/13.jpg'
+    //   },
+    //   nat: 'TR'
+    // }
+    // [nodemon] clean exit - waiting for changes before restart -->
